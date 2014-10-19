@@ -7,6 +7,15 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable,
          :validatable, authentication_keys: [:login]
          :omniauthable, omniauth_providers: [:soundcloud]
+         
+  def self.find_for_database_authentication(warden_conditions)
+      conditions = warden_conditions.dup
+      if login = conditions.delete(:login)
+        where(conditions).where(["lower(username) = :value OR lower(email) = :value", { :value => login.downcase }]).first
+      else
+        where(conditions).first
+      end
+   end
 
    def self.from_omniauth(auth)
      where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
