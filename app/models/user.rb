@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
+         :validatable, authentication_keys: [:login]
          :omniauthable, omniauth_providers: [:soundcloud]
 
    def self.from_omniauth(auth)
