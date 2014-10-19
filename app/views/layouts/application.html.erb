@@ -10,7 +10,7 @@
 	<% if user_signed_in? %>
 		<p>Signed in</p>
 	<% else %>
-		<%= link_to "Sign in with Soundcloud", user_omniauth_authorize_path(:soundcloud) %>
+		<%= link_to "Connect with Soundcloud", user_omniauth_authorize_path(:soundcloud) %>
 	<% end %>
 <%= yield %>
 
