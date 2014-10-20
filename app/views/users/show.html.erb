@@ -20,5 +20,13 @@
 		<p><%= wallet.name %></p>
 	<% end %>
 
+
+	<hr>
+	<% @tracks.each do |track| %>
+		<%= image_tag track.artwork_url %>
+		<p><%= link_to track.title, track.permalink_url  %></p>
+		<hr>
+	<% end %>
+	
 </body>
 </html>
