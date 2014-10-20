@@ -17,17 +17,11 @@ ActiveRecord::Schema.define(version: 20141020183200) do
   enable_extension "plpgsql"
 
   create_table "songs", force: true do |t|
-    t.string "name"
-  end
-
-  create_table "types", force: true do |t|
     t.string  "name"
     t.integer "wallet_id"
-    t.integer "song_id"
   end
 
-  add_index "types", ["song_id"], name: "index_types_on_song_id", using: :btree
-  add_index "types", ["wallet_id"], name: "index_types_on_wallet_id", using: :btree
+  add_index "songs", ["wallet_id"], name: "index_songs_on_wallet_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: ""

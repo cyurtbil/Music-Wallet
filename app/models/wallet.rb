@@ -1,5 +1,4 @@
-class Wallet < ActiveRecord:Base
-	has_many :songs, through: :types
-	has_many :types
+class Wallet < ActiveRecord::Base
 	belongs_to :user
+	has_many :songs
 end
