@@ -18,10 +18,10 @@ ActiveRecord::Schema.define(version: 20141020223142) do
 
   create_table "songs", force: true do |t|
     t.string  "name"
-    t.integer "wallet_id"
+    t.integer "user_id"
   end
 
-  add_index "songs", ["wallet_id"], name: "index_songs_on_wallet_id", using: :btree
+  add_index "songs", ["user_id"], name: "index_songs_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: ""

@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   # attr_accessor :username
   has_many :wallets
+  has_many :songs
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
