@@ -1,0 +1,9 @@
+<% if user_signed_in? %>
+	<p>Signed in as <%= current_user.username %> </p>
+<% else %>
+	<%= link_to "Connect with Soundcloud", user_omniauth_authorize_path(:soundcloud) %>
+<% end %>
+<h2>Top 10 Tracks</h2>
+<% @tracks.each do |track| %>
+  	<p><%= link_to track.permalink_url, track.permalink_url %></p>
+<% end %>
