@@ -31,7 +31,6 @@ class User < ActiveRecord::Base
 
   def self.new_with_session(params, session)
     super.tap do |user|
-    	# binding.pry
       if data = session["devise.soundcloud_data"] && session["devise.soundcloud_data"]["extra"]["raw_info"]
         user.username = data["username"] if user.username.blank?
       end

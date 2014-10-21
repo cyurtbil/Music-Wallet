@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20141020223142) do
   enable_extension "plpgsql"
 
   create_table "songs", force: true do |t|
-    t.string  "name"
+    t.string  "name",    default: "claptone"
     t.integer "user_id"
   end
 
