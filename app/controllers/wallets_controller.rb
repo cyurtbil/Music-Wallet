@@ -1,5 +1,9 @@
 class WalletsController < ApplicationController
 
+	def show
+		@wallet = Wallet.find(params[:id])
+	end
+
 	def create
 		@wallet = Wallet.create(wallet_params)
 		redirect_to user_path(current_user) 
