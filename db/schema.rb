@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20141021151919) do
     t.integer "user_id"
     t.integer "wallet_id"
     t.string  "type"
-    t.string  "search"
+    t.string  "search",    default: "claptone"
   end
 
   add_index "songs", ["user_id"], name: "index_songs_on_user_id", using: :btree

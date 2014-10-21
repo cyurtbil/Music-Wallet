@@ -1,0 +1,4 @@
+<%= render 'form' %>
+<% @wallets.each do |wallet| %>
+		<p><%= link_to wallet.name, wallet_path(wallet) %></p>
+<% end %>
