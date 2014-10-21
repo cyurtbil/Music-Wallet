@@ -3,6 +3,7 @@ class SongsController < ApplicationController
 
 	def index
 		keyword = params[:q]
+		@song = Song.new
 
 		client = Soundcloud.new(client_id: ENV['SOUNDCLOUD_CLIENT_ID'],
                         client_secret: ENV['SOUNDCLOUD_SECRET'])
@@ -20,7 +21,7 @@ class SongsController < ApplicationController
 
 	def create
 		@song = Song.create(song_params)
-		redirect_to user_path(current_user) 
+		redirect_to wallets_path 
 	end
 
 	private

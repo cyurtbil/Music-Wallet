@@ -7,6 +7,7 @@ class WalletsController < ApplicationController
 	end
 
 	def show
+		@songs = @wallet.songs
 	end
 
 	def new
