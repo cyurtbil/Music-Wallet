@@ -1,4 +1,10 @@
-<%= render 'form' %>
+<%= link_to 'Home', root_path %>
+			<%= link_to 'Profile', user_path(current_user) %>
+			<%= link_to 'Search', song_path(current_user.songs) %>
+			<%= link_to 'Wallets', wallets_path %>
+
 <% @wallets.each do |wallet| %>
 		<p><%= link_to wallet.name, wallet_path(wallet) %></p>
 <% end %>
+
+<%= link_to 'Add Wallet', new_wallet_path %>

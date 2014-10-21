@@ -7,13 +7,15 @@ class WalletsController < ApplicationController
 	end
 
 	def show
-		@wallet = Wallet.find(params[:id])
-		@songs = Song.all
+	end
+
+	def new
+		@wallet = Wallet.new
 	end
 
 	def create
 		@wallet = Wallet.create(wallet_params)
-		redirect_to :back
+		redirect_to wallets_path
 	end
 
 	private
