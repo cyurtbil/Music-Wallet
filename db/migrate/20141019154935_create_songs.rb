@@ -3,6 +3,7 @@ class CreateSongs < ActiveRecord::Migration
     create_table :songs do |t|
       t.string :name, default: "claptone"
       t.belongs_to :user, index: true
+      t.belongs_to :wallet, index: true
     end
   end
 end
