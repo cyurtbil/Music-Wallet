@@ -22,7 +22,7 @@
 	<% end %>
 		<p><strong>Search: </strong></p>
 	<%= render 'songs/form' %>
-	<% client = Soundcloud.new(client_id: ENV['SOUNDCLOUD_CLIENT_ID'], client_secret: ENV['SOUNDCLOUD_SECRET']) %>
+	
 	<hr>
 	<% @tracks.each do |track| %>
 		<iframe width="100%" height="400" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?visual=true&url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F<%= track.id %>&show_artwork=true&client_id=3e664ddb00dc36cccd7244884f13749d"></iframe>

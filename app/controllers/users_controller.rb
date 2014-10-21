@@ -9,9 +9,9 @@ class UsersController < ApplicationController
                         client_secret: ENV['SOUNDCLOUD_SECRET'])
 
 		if current_user.songs != []
-   		@tracks = client.get('/tracks', q: "#{current_user.songs.last.name}")
+   		@tracks = client.get('/tracks', q: "#{current_user.songs.last.name}", limit: 3)
    	else
-   		@tracks = client.get('/tracks', q: "#{@song.name}")
+   		@tracks = client.get('/tracks', q: "#{@song.name}", limit: 3)
 		end
 	end
 end
