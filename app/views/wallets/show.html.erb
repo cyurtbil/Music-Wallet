@@ -4,5 +4,10 @@
 </head>
 <body>
 	<h1><%= @wallet.name %></h1>
+	<% @songs.each do |song| %>
+		<% if song.type == @wallet.name  %>
+			<p><%= song.type %></p>
+		<% end %>
+	<% end %>
 </body>
 </html>

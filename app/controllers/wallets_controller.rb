@@ -2,6 +2,8 @@ class WalletsController < ApplicationController
 
 	def show
 		@wallet = Wallet.find(params[:id])
+		@songs = @wallet.songs
+		@song = Song.new(user_id: current_user.id)
 	end
 
 	def create

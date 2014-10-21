@@ -30,8 +30,8 @@
 		<br>
 			<%= form_for @song do |f| %>
 				<%= f.hidden_field :name %>
-				<%= f.collection_select :wallet_id, Wallet.all, :id, :name %>
-				<%= submit_tag 'Pick' %>
+				<%= f.collection_select :type, Wallet.all, :id, :name %>
+				<%= f.submit 'Pick' %>
 			<% end %>
 		<hr>
 	<% end %>
