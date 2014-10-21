@@ -19,15 +19,19 @@
 	<% @wallets.each do |wallet| %>
 		<p><%= wallet.name %></p>
 	<% end %>
-	<p><strong>Search by Song Name: </strong></p>
+		<p><strong>Search: </strong></p>
 	<%= render 'songs/form' %>
 
 	<hr>
 	<% @tracks.each do |track| %>
 		<%= image_tag track.artwork_url %>
 		<p><%= link_to track.title, track.permalink_url  %></p>
+		<% @wallets.each do |wallet| %>
+			<%= check_box_tag :name %>
+			<%= label_tag :name, "#{wallet.name}" %>
+		<% end %>
 		<hr>
 	<% end %>
-	
+
 </body>
 </html>
