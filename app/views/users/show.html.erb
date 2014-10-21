@@ -22,14 +22,17 @@
 	<% end %>
 		<p><strong>Search: </strong></p>
 	<%= render 'songs/form' %>
-	
+
 	<hr>
 	<% @tracks.each do |track| %>
 		<iframe width="100%" height="400" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?visual=true&url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F<%= track.id %>&show_artwork=true&client_id=3e664ddb00dc36cccd7244884f13749d"></iframe>
-		<% @wallets.each do |wallet| %>
 		<br>
-			<%= check_box_tag :name %><%= label_tag :name, "#{wallet.name}" %>
+		<% @wallets.each do |wallet| %>
+			<%= hidden_field_tag :name %>
+			<%= check_box_tag :name %>
+			<%= label_tag :name, "#{wallet.name}" %>
 		<% end %>
+			<%= submit_tag 'Pick' %>
 		<hr>
 	<% end %>
 
