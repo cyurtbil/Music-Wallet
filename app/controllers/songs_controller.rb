@@ -1,16 +1,21 @@
 class SongsController < ApplicationController
 	before_action :set_song, only: [:show, :edit, :update, :destroy]
 
-	def show
-		binding.pry
+	def index
+		keyword = params[:q]
+
 		client = Soundcloud.new(client_id: ENV['SOUNDCLOUD_CLIENT_ID'],
                         client_secret: ENV['SOUNDCLOUD_SECRET'])
-
-		if current_user.songs != []
-   		@songs = client.get('/tracks', q: "#{current_user.songs.last.search}", limit: 3)
-   	else
-   		@songs = client.get('/tracks', q: "#{@song.search}", limit: 3)
+		unless keyword.nil?
+			@songs = client.get('/tracks', q: keyword, limit: 3)
+		else
+			@songs = []
 		end
+
+	end
+
+	def show
+	
 	end
 
 	def create

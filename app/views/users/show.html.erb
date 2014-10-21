@@ -1,21 +1,4 @@
-<html>
-<head>
-	<title>MusicWallet</title>
-</head>
-<body>
-
-	<header>
-		<nav>	
-			<%= link_to 'Home', root_path %>
-			<%= link_to 'Profile', user_path(current_user) %>
-			<%= link_to 'Search', song_path(current_user.songs) %>
-			<%= link_to 'Wallets', wallets_path %>
-		</nav>
-	</header>
-	<div>
-		<div><%= current_user.username %></div>
-		<div><%= image_tag current_user.image%></div>
-	</div>
-
-</body>
-</html>
+<div>
+	<div><%= current_user.username %></div>
+	<div><%= image_tag current_user.image%></div>
+</div>

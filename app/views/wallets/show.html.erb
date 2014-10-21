@@ -1,13 +1,7 @@
-<html>
-<head>
-	<title>MusicWallet</title>
-</head>
-<body>
+
 	<h1><%= @wallet.name %></h1>
 	<% @songs.each do |song| %>
 		<% if song.wallet_id == @wallet.id %>
 			<p><%= song.id %></p>
 		<% end %>
 	<% end %>
-</body>
-</html>
