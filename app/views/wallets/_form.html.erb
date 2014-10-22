@@ -1,6 +1,8 @@
-<%= form_for @wallet do |f| %>
-	<%= f.hidden_field :user_id %>
-	<%= f.label :name %>
-	<%= f.text_field :name %>
-	<%= f.submit %>
-<% end %>
+<div class='form'>
+	<%= form_for @wallet do |f| %>
+		<%= f.hidden_field :user_id %>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+		<%= f.submit 'Add', class: 'actions' %>
+	<% end %>
+</div>

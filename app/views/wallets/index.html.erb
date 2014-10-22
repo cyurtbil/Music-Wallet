@@ -1,5 +1,8 @@
-<% @wallets.each do |wallet| %>
-		<p><%= link_to wallet.name, wallet_path(wallet) %></p>
-<% end %>
+<div>
+	<% @wallets.each do |wallet| %>
+		<p><%= link_to wallet.name, wallet_path(wallet), class: 'wallets' %></p>
+	<% end %>
 
-<%= link_to 'Add Wallet', new_wallet_path %>
+	<%= link_to 'Add Wallet', new_wallet_path, class: 'actions' %>
+</div>
+

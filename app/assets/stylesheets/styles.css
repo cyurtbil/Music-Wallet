@@ -22,9 +22,38 @@ header nav {
 
 h1.navi {
 	margin: 0px;
-	padding: 5px;
+	padding: 5px 8%;
 }
 
-section#content {
+section.content {
 	margin: 20px;
+}
+
+section h2 {
+	background-color: #2B2B2B;
+	color: #EEEEEE;
+	text-align: center;
+	padding: 10px;
+	max-height: 500px;
+}
+
+iframe {
+	height: 150px;
+}
+
+.actions {
+	border: 1px solid #A00000;
+	background-color: black;
+	color: white;
+	text-decoration: none;
+	padding: 3px 5px;
+	border-radius: 2px;
+}
+
+.form {
+	margin: 50px 20% 0px 20%;
+	border: 1px solid black;
+	border-radius: 3px;
+	padding: 10px 10%;
+	background-color: #E8E8E8;
 }
