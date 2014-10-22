@@ -4,11 +4,19 @@ class SongsController < ApplicationController
 	def index
 		keyword = params[:q]
 		@song = Song.new
+		@song_ids = {}
 
 		client = Soundcloud.new(client_id: ENV['SOUNDCLOUD_CLIENT_ID'],
                         client_secret: ENV['SOUNDCLOUD_SECRET'])
+		
 		unless keyword.nil?
 			@songs = client.get('/tracks', q: keyword, limit: 3)
+			num = 0
+			@songs.each do |song|
+				@song_ids[num] = song.id
+				num += 1
+			end
+			binding.pry
 		else
 			@songs = []
 		end

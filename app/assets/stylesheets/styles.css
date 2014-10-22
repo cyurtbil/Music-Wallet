@@ -34,7 +34,6 @@ section h2 {
 	color: #EEEEEE;
 	text-align: center;
 	padding: 10px;
-	max-height: 500px;
 }
 
 iframe {
@@ -42,12 +41,18 @@ iframe {
 }
 
 .actions {
-	border: 1px solid #A00000;
+	border: 1px solid black;
 	background-color: black;
 	color: white;
 	text-decoration: none;
 	padding: 3px 5px;
 	border-radius: 2px;
+}
+
+.actions:hover, div h2:hover {
+	border: 1px solid #A00000;
+	background-color: #A00000;
+	cursor: pointer;
 }
 
 .form {
@@ -56,4 +61,20 @@ iframe {
 	border-radius: 3px;
 	padding: 10px 10%;
 	background-color: #E8E8E8;
+}
+
+div h2 {
+	background-color: #2B2B2B;
+	text-align: center;
+	padding: 10px;
+}
+
+.wallets {
+	text-decoration: none;
+	color: #EEEEEE;
+}
+
+div#wlist {
+	margin: 150px 20%;
+	/*text-align: center;*/
 }
