@@ -23,6 +23,11 @@ class WalletsController < ApplicationController
 		end
 	end
 
+	def destroy
+			@wallet.destroy
+			redirect_to :back 
+	end
+
 	private
 
 		def set_wallet
@@ -30,6 +35,6 @@ class WalletsController < ApplicationController
 		end
 
 		def wallet_params
-			params.require(:wallet).permit(:name, :user_id)
+			params.require(:wallet).permit(:name).merge(user_id: current_user.id)
 		end
 end

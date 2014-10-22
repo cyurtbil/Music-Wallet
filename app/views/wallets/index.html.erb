@@ -1,8 +1,11 @@
 <div id="wlist">
 	<% @wallets.each do |wallet| %>
 		<h2 class="head"><%= link_to wallet.name, wallet_path(wallet), class: 'wallets' %></h2>
+		<% if wallet.user_id == current_user.id %>
+			<%= link_to 'Remove Wallet', wallet_path(wallet), method: :delete, class: 'actions' %>
+		<% end %>
 	<% end %>
-
+	<br><br>
 	<%= link_to 'Add Wallet', new_wallet_path, class: 'actions' %>
 </div>
 
