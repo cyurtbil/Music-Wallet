@@ -16,7 +16,11 @@ class WalletsController < ApplicationController
 
 	def create
 		@wallet = Wallet.create(wallet_params)
-		redirect_to wallets_path
+		if @wallet.save
+			redirect_to wallets_path
+		else
+			render :new
+		end
 	end
 
 	private

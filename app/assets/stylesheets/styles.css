@@ -49,7 +49,7 @@ iframe {
 	border-radius: 2px;
 }
 
-.actions:hover, div h2:hover {
+.actions:hover, div h2.head:hover {
 	border: 1px solid #A00000;
 	background-color: #A00000;
 	cursor: pointer;
@@ -63,7 +63,7 @@ iframe {
 	background-color: #E8E8E8;
 }
 
-div h2 {
+div h2.head {
 	background-color: #2B2B2B;
 	text-align: center;
 	padding: 10px;
@@ -77,4 +77,10 @@ div h2 {
 div#wlist {
 	margin: 150px 20%;
 	/*text-align: center;*/
+}
+
+div.error_explanation {
+	color: red;
+	border: 3px solid red;
+	padding: 10px;
 }

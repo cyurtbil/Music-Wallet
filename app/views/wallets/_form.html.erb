@@ -1,5 +1,16 @@
 <div class='form'>
 	<%= form_for @wallet do |f| %>
+	 <% if @wallet.errors.any? %>
+    			<div class="error_explanation">
+      			<h2><%= pluralize(@wallet.errors.count, "error") %> prohibited this wallet from being saved:</h2>
+
+      			<ul>
+     					<% @wallet.errors.full_messages.each do |message| %>
+        				<li><%= message %></li>
+      				<% end %>
+     				 </ul>
+    			</div>
+  	<% end %>
 		<%= f.hidden_field :user_id %>
 		<%= f.label :name %>
 		<%= f.text_field :name %>
