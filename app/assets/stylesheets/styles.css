@@ -5,12 +5,26 @@
 body {
 	margin: 0px;
 	padding: 0px;
+	background-color: #F9F9F9;
 }
 
 div#connect {
 	position: absolute;
-	top: 70px;
+	top: 250px;
+	left: 22%;
+}
+
+h2#welcome {
+	position: absolute;
+	top: 100px;
+	left: 18%;
+}
+
+div#exp {
+	position: absolute;
+	top: 160px;
 	left: 20%;
+	text-align: center;
 }
 
 .home-image {
@@ -18,6 +32,7 @@ div#connect {
 	margin: 0px;
 	background-size: cover;
 	vertical-align:text-bottom;
+	opacity: 0.5;
 	z-index: 0;
 }
 

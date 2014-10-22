@@ -7,7 +7,8 @@
 				<h2 class="head">Top 5 Tracks</h2>
 				<hr>
 				<% @songs.each do |song| %>
-		  			<iframe width="100%" height="400" scrolling="no" frameborder="no" src="https://w.	soundcloud.com/player/?visual=true&url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F<	%= song.id %>&	show_artwork=true&client_id=3e664ddb00dc36cccd7244884f13749d"></	iframe>
+		  				<iframe width="100%" height="400" scrolling="no" frameborder="no" src="https://w.soundcloud.	com/player/?visual=true&url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F<%= song.id %>&show_artwork=tru&client_id=3e664ddb00dc36cccd7244884f13749d"></iframe>
+					<br>
 		  			<%= form_for @song do |f| %>
 							<%= f.hidden_field :track_id, value: song.id %>
 							<%= f.collection_radio_buttons :wallet_id, Wallet.all, :id, :name %>
@@ -16,7 +17,9 @@
 		  			<hr>
 				<% end %>
 			</section>
-		<% else %>
+	<% else %>
 			<%= image_tag "home.png", class: 'home-image' %>
+			<h2 id="welcome">Welcome to MusicWallet</h2><br>
+			<div id="exp">The Address for Quality Sounds<br><br><br>Powered by Soundcloud</div>
 			<div id="connect"><%= link_to "Connect with Soundcloud", user_omniauth_authorize_path(:soundcloud), class: 'actions' %></div>
-		<% end %>
+	<% end %>
