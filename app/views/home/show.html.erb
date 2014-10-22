@@ -1,15 +1,15 @@
-<% if user_signed_in? %>
-
-		<h1>MusicWallet</h1>
-			<p>Signed in as <%= current_user.username %> </p>
-
-		<h2>Top 5 Tracks</h2>
-		<hr>
-		<% @tracks.each do |track| %>
-  			<iframe width="100%" height="400" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?visual=true&url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F<%= track.id %>&show_artwork=true&client_id=3e664ddb00dc36cccd7244884f13749d"></iframe>
-  			<hr>
+<section id="content">
+	<% if user_signed_in? %>
+				<p>Signed in as <%= current_user.username %> </p>
+	
+			<h2>Top 5 Tracks</h2>
+			<hr>
+			<% @tracks.each do |track| %>
+	  			<iframe width="100%" height="400" scrolling="no" frameborder="no" src="https://w.soundcloud.	com/player/?visual=true&url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F<%= track.id %>&	show_artwork=true&client_id=3e664ddb00dc36cccd7244884f13749d"></iframe>
+	  			<hr>
+			<% end %>
+	
+		<% else %>
+			<%= link_to "Connect with Soundcloud", user_omniauth_authorize_path(:soundcloud) %>
 		<% end %>
-
-	<% else %>
-		<%= link_to "Connect with Soundcloud", user_omniauth_authorize_path(:soundcloud) %>
-	<% end %>
+</section>

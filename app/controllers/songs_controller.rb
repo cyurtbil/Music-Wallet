@@ -16,7 +16,6 @@ class SongsController < ApplicationController
 	end
 
 	def show
-	
 	end
 
 	def create
@@ -31,6 +30,6 @@ class SongsController < ApplicationController
 		end
 
 		def song_params
-			params.require(:song).permit(:name, :user_id, :wallet_id, :type)
+			params.require(:song).permit(:name, :user_id, :wallet_id)
 		end
 end

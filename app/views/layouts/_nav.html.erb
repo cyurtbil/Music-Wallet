@@ -1,8 +1,9 @@
 <header>
-		<nav>	
-			<%= link_to 'Home', root_path %>
-			<%= link_to 'Profile', user_path(current_user) %>
-			<%= link_to 'Search', songs_path %>
-			<%= link_to 'Wallets', wallets_path %>
+		<nav>
+			<h1 class="navi">MusicWallet</h1>	
+			<%= link_to 'Home', root_path, class: 'navi' %>
+			<%= link_to 'Profile', user_path(current_user), class: 'navi' %>
+			<%= link_to 'Search', songs_path, class: 'navi' %>
+			<%= link_to 'Wallets', wallets_path, class: 'navi' %>
 		</nav>
 </header>
