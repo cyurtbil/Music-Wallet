@@ -42,9 +42,15 @@ header nav {
 	height: 40px;
 }
 
+header nav span .navi:hover {
+	background-color: #404040;
+	cursor: pointer;
+}
+
 .navi {
 	float: left;
-	margin: 10px 7%;
+	margin: 0px 6%;
+	padding: 11px 10px;
 	text-decoration: none;
 	color: #EEEEEE;
 }

@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+
 	def show
 		@song = Song.new
 
@@ -6,4 +7,5 @@ class HomeController < ApplicationController
                         client_secret: ENV['SOUNDCLOUD_SECRET'])
 		@songs = client.get('/tracks', limit: 5, order: 'hotness')
 	end
+	
 end
