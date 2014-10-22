@@ -27,12 +27,9 @@ class SongsController < ApplicationController
 	end
 
 	def destroy
-	 	binding.pry
-	 		@songs.each do | song |
-	 			if song.checked == true && current_user.id == song.user_id
-	 				song.destroy
-	 			end
-	 		end
+		binding.pry
+		@song.destroy
+		redirect_to :back
 	end
 
 	private
