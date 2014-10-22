@@ -1,5 +1,6 @@
 <div class='form'>
 	<%= form_for @wallet do |f| %>
+  <h2>Add Wallet</h2>
 	 <% if @wallet.errors.any? %>
     			<div class="error_explanation">
       			<h2><%= pluralize(@wallet.errors.count, "error") %> prohibited this wallet from being saved:</h2>
@@ -11,9 +12,12 @@
      				 </ul>
     			</div>
   	<% end %>
+    <br>
 		<%= f.hidden_field :user_id %>
-		<%= f.label :name %>
-		<%= f.text_field :name %>
+		<%= f.label :name, 'Wallet Name:' %>
+    <br>
+		<%= f.text_field :name, size: '50' %>
+    <br>
 		<%= f.submit 'Add', class: 'actions' %>
 	<% end %>
 </div>

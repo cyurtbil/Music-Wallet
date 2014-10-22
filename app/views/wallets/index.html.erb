@@ -1,12 +1,15 @@
-<div id="wlist">
-	<% @wallets.each do |wallet| %>
-		<h2 class="head"><%= link_to wallet.name, wallet_path(wallet), class: 'wallets' %></h2>
-		<% if wallet.user_id == current_user.id %>
-			<%= link_to 'Edit', edit_wallet_path(wallet), class: 'actions' %>
-			<%= link_to 'Remove Wallet', wallet_path(wallet), method: :delete, class: 'actions' %>
-		<% end %>
-	<% end %>
-	<br><br>
-	<%= link_to 'Add Wallet', new_wallet_path, class: 'actions' %>
-</div>
+<section class="content">	
+	<h1 style="text-align:center;">Wallets</h1>
+		<div id="wlist">
+			<% @wallets.each do |wallet| %>
+				<h2 class="head"><%= link_to wallet.name, wallet_path(wallet), class: 'wallets' %></h2>
+				<% if wallet.user_id == current_user.id %>
+					<%= link_to 'Edit', edit_wallet_path(wallet), class: 'actions' %>
+					<%= link_to 'Remove Wallet', wallet_path(wallet), method: :delete, class: 'actions' %>
+				<% end %>
+			<% end %>
+			<br><br>
+			<div style="text-align:center;"><%= link_to 'Add Wallet', new_wallet_path, class: 'actions' %></div>
+		</div>
+</section>
 
