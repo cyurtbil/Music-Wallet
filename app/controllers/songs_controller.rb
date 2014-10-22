@@ -27,7 +27,6 @@ class SongsController < ApplicationController
 	end
 
 	def destroy
-		binding.pry
 		@song.destroy
 		redirect_to :back
 	end
