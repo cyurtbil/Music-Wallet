@@ -16,6 +16,8 @@ class User < ActiveRecord::Base
       	user.uid = auth.uid
       	user.username = auth.info.nickname
         user.image = auth.info.image
+        user.following_count = auth.extra.raw_info.followings_count
+        user.followers_count = auth.extra.raw_info.followers_count
       	user.password = Devise.friendly_token[0,20]
      end
   end
