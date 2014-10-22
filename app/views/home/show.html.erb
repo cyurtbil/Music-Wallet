@@ -1,7 +1,7 @@
 
 	<% if user_signed_in? %>
 		<section class="content">
-			<div><%= image_tag current_user.image %></div>
+			<iframe allowtransparency="true" scrolling="no" frameborder="no" src="https://w.soundcloud.com/icon/?url=http%3A%2F%2Fsoundcloud.com%2F<%= current_user.username %>&color=black_white&size=48" style="width: 48px; height: 48px;"></iframe>
 			<strong><p>Signed in as <%= current_user.username %></p></strong>
 					
 				<h2 class="head">Top 5 Tracks</h2>
