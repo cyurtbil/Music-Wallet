@@ -2,6 +2,6 @@
 	<h1><%= @wallet.name %></h1>
 	<% @songs.each do |song| %>
 		<% if song.wallet_id == @wallet.id %>
-			<p><%= song.id %></p>
+			<p><%= song.track_id %></p>
 		<% end %>
 	<% end %>

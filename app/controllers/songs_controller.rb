@@ -21,7 +21,7 @@ class SongsController < ApplicationController
 
 	def create
 		@song = Song.create(song_params)
-		redirect_to wallets_path 
+		redirect_to :back 
 	end
 
 	private
