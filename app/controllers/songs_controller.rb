@@ -10,7 +10,7 @@ class SongsController < ApplicationController
                         client_secret: ENV['SOUNDCLOUD_SECRET'])
 		
 		unless keyword.nil?
-			@songs = client.get('/tracks', q: keyword, limit: 3)
+			@songs = client.get('/tracks', q: keyword, limit: 10)
 			@song_ids = @songs.map(&:id)
 		else
 			@songs = []

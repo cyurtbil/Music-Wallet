@@ -7,6 +7,20 @@ body {
 	padding: 0px;
 }
 
+div#connect {
+	position: absolute;
+	top: 70px;
+	left: 20%;
+}
+
+.home-image {
+	width: 100%;
+	margin: 0px;
+	background-size: cover;
+	vertical-align:text-bottom;
+	z-index: 0;
+}
+
 header nav {
 	background-color: #2B2B2B;
 	width: 100%;
@@ -15,7 +29,7 @@ header nav {
 
 .navi {
 	float: left;
-	margin: 10px 5%;
+	margin: 10px 7%;
 	text-decoration: none;
 	color: #EEEEEE;
 }

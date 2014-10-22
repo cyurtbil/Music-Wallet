@@ -4,5 +4,6 @@
 			<%= link_to 'Home', root_path, class: 'navi' %>
 			<%= link_to 'Search', songs_path, class: 'navi' %>
 			<%= link_to 'Wallets', wallets_path, class: 'navi' %>
+			<%= link_to "Logout", destroy_user_session_path, method: :delete, class: 'navi' %>
 		</nav>
 </header>
