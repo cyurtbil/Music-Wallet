@@ -2,6 +2,7 @@
 	<% @wallets.each do |wallet| %>
 		<h2 class="head"><%= link_to wallet.name, wallet_path(wallet), class: 'wallets' %></h2>
 		<% if wallet.user_id == current_user.id %>
+			<%= link_to 'Edit', edit_wallet_path(wallet), class: 'actions' %>
 			<%= link_to 'Remove Wallet', wallet_path(wallet), method: :delete, class: 'actions' %>
 		<% end %>
 	<% end %>
