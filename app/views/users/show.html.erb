@@ -1,4 +1,6 @@
-<div>
-	<div><%= current_user.username %></div>
+<section class="content">
 	<div><%= image_tag current_user.image%></div>
-</div>
+	<div><%= current_user.username %></div>
+	<div><%= current_user.followers_count %></div>
+	<div><%= current_user.following_count %></div>
+</section>
