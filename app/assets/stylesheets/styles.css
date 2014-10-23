@@ -8,6 +8,11 @@ body {
 	background-color: #F9F9F9;
 }
 
+.users {
+	float: left;
+	margin: 3%;
+}
+
 div#connect {
 	position: absolute;
 	top: 250px;

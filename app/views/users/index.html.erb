@@ -1,7 +1,7 @@
 <section class="content">
 
 	<% @users.each do |user| %>
-		<span>
+		<span class="users">
 			<div><%= image_tag user.image %></div>
 			<div><strong><%= user.username %></strong></div>
 			<br>
@@ -10,7 +10,9 @@
 			<div><strong>Following: </strong> <%= user.followers_count %></div>
 			<p><strong>Wallets</strong></p>
 			<% @wallets.each do |wallet| %>
-				<div><%= link_to wallet.name, wallet_path(wallet), class: 'user-w' %></div>
+				<% if user.id == wallet.user_id %>
+					<div><%= link_to wallet.name, wallet_path(wallet), class: 'user-w' %></div>
+				<% end %>
 			<% end %>
 		</span>
 	<% end %>
