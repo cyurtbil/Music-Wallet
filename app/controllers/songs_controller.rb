@@ -5,6 +5,7 @@ class SongsController < ApplicationController
 		keyword = params[:q]
 		@song = Song.new
 		@song_ids = []
+		@wallets = Wallet.all
 
 		client = Soundcloud.new(client_id: ENV['SOUNDCLOUD_CLIENT_ID'],
                         client_secret: ENV['SOUNDCLOUD_SECRET'])
