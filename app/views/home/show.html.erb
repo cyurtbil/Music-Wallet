@@ -1,13 +1,13 @@
 
 	<% if user_signed_in? %>
 		<section class="content">
-			<!-- <iframe allowtransparency="true" scrolling="no" frameborder="no" src="https://w.soundcloud.com/icon/?url=http%3A%2F%2Fsoundcloud.com%2F<%= current_user.username %>&color=black_white&size=48" style="width: 48px; height: 48px;"></iframe> -->
+			<iframe allowtransparency="true" scrolling="no" frameborder="no" src="https://w.soundcloud.com/icon/?url=http%3A%2F%2Fsoundcloud.com%2F<%= current_user.username %>&color=black_white&size=48" style="width: 48px; height: 48px;"></iframe>
 			<strong><p>Signed in as <%= current_user.username %></p></strong>
 					
 				<h2 class="head">Top 5 Tracks</h2>
 				<hr>
 				<% @songs.each do |song| %>
-		  				<iframe width="100%" height="400" scrolling="no" frameborder="no" src="https://w.soundcloud.	com/player/?visual=true&url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F<%= song.id %>&show_artwork=tru&client_id=3e664ddb00dc36cccd7244884f13749d"></iframe>
+		  				<iframe width="100%" height="400" scrolling="no" frameborder="no" src="https://w.soundcloud.	com/player/?visual=true&url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F<%= song.id %>&show_artwork=tru&client_id=ENV[SOUNDCLOUD_CLIENT_ID]"></iframe>
 					<br>
 		  		<% @wallets.each do |wallet| %>
 						<% if current_user.id == wallet.user_id %>
