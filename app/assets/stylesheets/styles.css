@@ -104,6 +104,14 @@ div h2.head {
 	padding: 10px;
 }
 
+.user-w {
+	color: #404040;
+	text-decoration: none;
+	text-align: center;
+	padding: 10px;
+}
+
+
 .wallets {
 	text-decoration: none;
 	color: #EEEEEE;

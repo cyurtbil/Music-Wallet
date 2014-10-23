@@ -1,9 +1,18 @@
-<% @users.each do |user| %>
-	<div><%= image_tag user.image %></div>
-	<div><%= user.username %></div>
-	<div><%= user.following_count %></div>
-	<div><%= user.followers_count %></div>
-	<% @wallets.each do |wallet| %>
-		<div><%= link_to wallet.name, wallet_path(wallet) %></div>
+<section class="content">
+
+	<% @users.each do |user| %>
+		<span>
+			<div><%= image_tag user.image %></div>
+			<div><strong><%= user.username %></strong></div>
+			<br>
+			<div><strong>Followers: </strong> <%= user.following_count %></div>
+			<br>
+			<div><strong>Following: </strong> <%= user.followers_count %></div>
+			<p><strong>Wallets</strong></p>
+			<% @wallets.each do |wallet| %>
+				<div><%= link_to wallet.name, wallet_path(wallet), class: 'user-w' %></div>
+			<% end %>
+		</span>
 	<% end %>
-<% end %>
+
+</section>
