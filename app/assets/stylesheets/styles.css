@@ -49,8 +49,8 @@ header nav span .navi:hover {
 
 .navi {
 	float: left;
-	margin: 0px 6%;
-	padding: 11px 10px;
+	/*margin: 0px 6%;*/
+	padding: 11px 2%;
 	text-decoration: none;
 	color: #EEEEEE;
 }

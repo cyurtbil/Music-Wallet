@@ -1,0 +1,9 @@
+<% @users.each do |user| %>
+	<div><%= image_tag user.image %></div>
+	<div><%= user.username %></div>
+	<div><%= user.following_count %></div>
+	<div><%= user.followers_count %></div>
+	<% @wallets.each do |wallet| %>
+		<div><%= link_to wallet.name, wallet_path(wallet) %></div>
+	<% end %>
+<% end %>
