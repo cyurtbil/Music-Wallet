@@ -11,7 +11,7 @@
 			<p><strong>Wallets</strong></p>
 			<% @wallets.each do |wallet| %>
 				<% if user.id == wallet.user_id %>
-					<div><%= link_to wallet.name, wallet_path(wallet), class: 'user-w' %></div>
+					<div><%= link_to wallet.name, wallet_path(wallet), class: 'user-w actions' %></div>
 				<% end %>
 			<% end %>
 		</span>
