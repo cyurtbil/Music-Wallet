@@ -5,9 +5,9 @@ require File.expand_path('../config/application', __FILE__)
 
 Rails.application.load_tasks
 
-if Rails.env == 'development' || Rails.env == 'test'
-  require 'somegem1'
-  require 'somegem2'
+# if Rails.env == 'development' || Rails.env == 'test'
+#   require 'somegem1'
+#   require 'somegem2'
 
-  # whatever code is being used by those gems goes in this block
-end
+#   # whatever code is being used by those gems goes in this block
+# end
