@@ -47,6 +47,6 @@ class WalletsController < ApplicationController
 		end
 
 		def wallet_params
-			params.require(:wallet).permit(:name).merge(user_id: current_user.id)
+			params.require(:wallet).permit(:name, :checked).merge(user_id: current_user.id)
 		end
 end

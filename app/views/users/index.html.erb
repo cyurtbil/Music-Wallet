@@ -1,26 +1,19 @@
 <section class="content">
-	<% @wallets.each do |wallet| %>
-		<%= hidden_field_tag :checked, true %>
-		<%= button_tag wallet.name, class: 'actions' %>
-	<% end %>
-
-	<% @users.each do |user| %>
-			<% @wallets.each do |wallet| %>
-				<% if wallet.checked %>
-					<span class="users">
-						<div><%= image_tag user.image %></div>
-						<div><strong><%= user.username %></strong></div>
-						<br>
-						<div><strong>Followers: </strong> <%= user.following_count %></div>
-						<br>
-						<div><strong>Following: </strong> <%= user.followers_count %></div>
-						<p><strong>Wallets</strong></p>
-						<% if user.id == wallet.user_id %>
-							<div><%= link_to wallet.name, wallet_path(wallet), class: 'user-w actions' %></div>
-						<% end %>
-					</span>
-				<% end %>
-			<% end %>
-	<% end %>
-
+    <% @users.each do |user| %>
+        <span class="users">
+          <div><%= image_tag user.image %></div>
+          <div><strong><%= user.username %></strong></div>
+          <br>
+          <div><strong>Followers: </strong> <%= user.following_count %></div>
+          <br>
+          <div><strong>Following: </strong> <%= user.followers_count %></div>
+          <p><strong>Wallets</strong></p>
+          <% @wallets.each do |wallet| %>
+            <% if user.id == wallet.user_id %>
+              <div><%= link_to wallet.name, wallet_path(wallet) %></div>
+              <br>
+            <% end %>
+          <% end %>
+        </span>
+    <% end %>
 </section>
