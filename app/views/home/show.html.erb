@@ -17,7 +17,6 @@
 								<%= f.label wallet.name %>
 							<% end %>
 						<% end %>
-
 						<% unless current_user.wallets.empty? %>
 							<%= f.submit 'Add', class: 'actions' %>
 						<% end %>
