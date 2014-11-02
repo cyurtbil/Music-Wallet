@@ -54,7 +54,6 @@ header nav span .navi:hover {
 
 .navi {
 	float: left;
-	/*margin: 0px 6%;*/
 	padding: 11px 2%;
 	text-decoration: none;
 	color: #EEEEEE;
@@ -124,7 +123,6 @@ div h2.head {
 
 div#wlist {
 	margin: 150px 20%;
-	/*text-align: center;*/
 }
 
 div.error_explanation {

@@ -1,8 +1,8 @@
 <header>
 		<nav>
-			<h1 class="navi">MusicWallet</h1>	
+      <span class="navi">MusicWallet</span>	
 			<span><%= link_to 'Home', root_path, class: 'navi' %></span>
-			<span><%= link_to 'UW', users_path, class: 'navi' %></span>
+			<span><%= link_to 'Users', users_path, class: 'navi' %></span>
 			<span><%= link_to 'Search', songs_path, class: 'navi' %></span>
 			<span><%= link_to 'Wallets', wallets_path, class: 'navi' %></span>
 			<span><%= link_to "Logout", destroy_user_session_path, method: :delete, class: 'navi' %></span>

@@ -3,4 +3,6 @@ class Wallet < ActiveRecord::Base
 	has_many :songs
 
 	validates :name, presence: true, uniqueness: true , on: :create
+
+  # scope :filtered, -> { where(checked: true) }
 end
