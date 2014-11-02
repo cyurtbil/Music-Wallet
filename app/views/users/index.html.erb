@@ -1,4 +1,9 @@
 <section class="content">
+  <% @wallets.each do |wallet| %>
+    <%= hidden_field_tag wallet.checked, value: true %>
+    <%= radio_button_tag 'name', 'value' %>
+    <%= wallet.name %>
+  <% end %>
     <% @users.each do |user| %>
       <% unless user.id == current_user.id %>
         <span class="users">
