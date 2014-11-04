@@ -4,7 +4,7 @@ class SongsController < ApplicationController
 	def index
 		keyword = params[:q]
 		@song = Song.new
-		@song_ids = []
+		# @song_ids = []
 		@wallets = Wallet.all
 
 		client = Soundcloud.new(client_id: ENV['SOUNDCLOUD_CLIENT_ID'],
@@ -12,7 +12,7 @@ class SongsController < ApplicationController
 		
 		unless keyword.nil?
 			@songs = client.get('/tracks', q: keyword, limit: 10)
-			@song_ids = @songs.map(&:id)
+			# @song_ids = @songs.map(&:id)
 		else
 			@songs = []
 		end

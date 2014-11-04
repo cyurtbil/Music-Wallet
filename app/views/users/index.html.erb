@@ -1,22 +1,33 @@
 <section class="content">
-
+    <%= form_tag '/users', method: "get" do %>
+      <% @wallets.each do |wallet| %>
+        <% if @h[wallet.name] < 1 %>
+          <% @h[wallet.name] += 1 %>
+          <%= check_box_tag 'names[]', wallet.name %>
+          <%= label_tag wallet.name %>
+        <% end %>
+      <% end %>
+      <%= submit_tag 'Filter', class: 'actions' %>
+    <% end %>
     <% @users.each do |user| %>
       <% unless user.id == current_user.id %>
-        <span class="users">
-          <div><%= image_tag user.image %></div>
-          <div><strong><%= user.username %></strong></div>
-          <br>
-          <div><strong>Followers: </strong> <%= user.following_count %></div>
-          <br>
-          <div><strong>Following: </strong> <%= user.followers_count %></div>
-          <p><strong>Wallets</strong></p>
-          <% @wallets.each do |wallet| %>
-            <% if user.id == wallet.user_id %>
-              <div><%= link_to wallet.name, wallet_path(wallet) %></div>
-              <br>
+        <% if @filtered.all? { |x| user.wallets.include?(x) } %>
+          <span class="users">
+            <div><%= image_tag user.image %></div>
+            <div><strong><%= user.username %></strong></div>
+            <br>
+            <div><strong>Followers: </strong> <%= user.following_count %></div>
+            <br>
+            <div><strong>Following: </strong> <%= user.followers_count %></div>
+            <p><strong>Wallets</strong></p>
+            <% @wallets.each do |wallet| %>
+              <% if user.id == wallet.user_id %>
+                <div><%= link_to wallet.name, wallet_path(wallet) %></div>
+                <br>
+              <% end %>
             <% end %>
-          <% end %>
-        </span>
+          </span>
+        <% end %>
       <% end %>
     <% end %>
 </section>
