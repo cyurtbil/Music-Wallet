@@ -15,7 +15,7 @@
 
       <%= submit_tag 'Filter', class: 'actions' %>
     <% end %>
-
+    <hr>
     <% @users.each do |user| %>
 
       <% unless user.id == current_user.id %>
@@ -43,6 +43,6 @@
         <% end %>
 
       <% end %>
-      
+
     <% end %>
 </section>
