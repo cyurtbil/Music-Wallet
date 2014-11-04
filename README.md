@@ -9,12 +9,13 @@ MusicWallet is a music web app that users can search songs by keywords and categ
 ## STEP 1 - Install necessary gems
 
 Add to your Gemfile:
-
+```ruby
   gem 'devise'
   gem 'soundcloud'
   gem 'omniauth'
   gem 'omniauth-soundcloud', '~> 1.0.0'
-
+```
 and to your :development, :test group in Gemfile add:
-  
-  gem 'dotenv-rails' 
+```ruby  
+  gem 'dotenv-rails'
+```
