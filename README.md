@@ -1,6 +1,6 @@
 # MusicWallet App
 
-Heroku App: [MusicWallet](http://thawing-citadel-7864.herokuapp.com/)
+Heroku App: [MusicWallet](https://guarded-sea-6764.herokuapp.com/)
 
 
 MusicWallet is a music web app that users can search songs by keywords and categorize them according to their moods. Also users can search other users' wallets so they can listen and add from other users' categorized songs to their wallets. The app is using Soundcloud API to use the song, user data. Also the app using omniauth for authorization with the Soundcloud user info.
