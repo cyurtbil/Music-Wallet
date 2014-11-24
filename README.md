@@ -3,7 +3,7 @@
 Heroku App: [MusicWallet](https://guarded-sea-6764.herokuapp.com/)
 
 
-MusicWallet is a music web app that users can search songs by keywords and categorize them according to their moods. Also users can search other users' wallets so they can listen and add from other users' categorized songs to their wallets. The app is using Soundcloud API to use the song, user data. Also the app using omniauth for authorization with the Soundcloud user info.
+MusicWallet is a music web app that users can search songs by keywords and categorize them according to their moods. Also users can search other users' wallets so they can listen and add from other users' categorized songs to their wallets. The app is using Soundcloud API to use the song, user data. Also the app using omniauth for authorization with the Soundcloud user info. The main feature of this app that differentiates from simple playlist creating is that users can filter other users by their wallet name and see and listen their songs in select users' wallets.
 
 
 ## STEP 1 - Install necessary gems
